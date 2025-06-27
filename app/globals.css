@@ -38,3 +38,19 @@ html.dark {
 .dark .vertical-timeline::before {
     background: rgba(255, 255, 255, 0.2) !important;
 }
+
+/* Mobil için z-index ayarları */
+@media (max-width: 768px) {
+    .theme-toggle, .language-toggle {
+        z-index: 9999 !important;
+        position: fixed !important;
+    }
+    
+    header {
+        z-index: 9999 !important;
+    }
+    
+    nav {
+        z-index: 9999 !important;
+    }
+}
