@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html{
+    --line-color: #e5e7eb;
+    overscroll-behavior: none;
+}
+
+html.dark {
+    --line-color: rgba(255, 255, 255, 0.2);
+}
+
+.borderBlack {
+    @apply border border-black/10;
+}
+
+.dark .borderBlack {
+    @apply border-white/20;
+}
+
+/* Dark mode için vertical timeline stilleri */
+.dark .vertical-timeline-element-content {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+}
+
+.dark .vertical-timeline-element-content-arrow {
+    border-right: 0.4rem solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.dark .vertical-timeline-element-icon {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+}
+
+.dark .vertical-timeline::before {
+    background: rgba(255, 255, 255, 0.2) !important;
+}
