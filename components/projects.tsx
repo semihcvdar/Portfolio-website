@@ -29,7 +29,7 @@ function Project({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
-      className="group relative rounded-lg border border-gray-200 dark:border-white/10 overflow-hidden"
+      className="group relative rounded-lg border border-gray-200 dark:border-white/10 overflow-hidden bg-white dark:bg-white/5"
     >
       <a href={link} target="_blank" rel="noopener noreferrer">
         <Image
@@ -41,12 +41,12 @@ function Project({
           className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
         />
       </a>
-      <div className="p-4">
-        <h3 className="text-xl font-bold">{title}</h3>
-        <p className="mt-2 text-gray-700 dark:text-gray-300 whitespace-pre-line">
+      <div className="p-6">
+        <h3 className="text-xl font-bold mb-3">{title}</h3>
+        <p className="mt-2 text-gray-700 dark:text-gray-300 whitespace-pre-line mb-4">
           {description}
         </p>
-        <ul className="mt-4 flex flex-wrap gap-2">
+        <ul className="flex flex-wrap gap-2">
           {tags.map((tag, index) => (
             <li
               key={index}
@@ -66,9 +66,9 @@ export default function Projects() {
   const projects = projectsData[language];
 
   return (
-    <section id="projects" className="scroll-mt-28 mb-28">
+    <section id="projects" className="scroll-mt-28 mb-28 max-w-[53rem] mx-auto text-center">
       <SectionHeading>{translations[language].projectsTitle}</SectionHeading>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
         {projects.map((project, index) => (
           <Project key={index} {...project} />
         ))}
