@@ -3,16 +3,20 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { projectsData } from "@/lib/data";
+import { useLanguage } from "@/context/language-context";
+import { translations } from "@/lib/translations";
+import SectionHeading from "./section-heading";
 
 type ProjectProps = {
   title: string;
   description: string;
-  tags: string[];
+  tags: readonly string[];
   imageUrl: any; // Next.js image types are usually imported via StaticImageData, but `any` is acceptable here
   link: string;
 };
 
-export default function Project({
+function Project({
   title,
   description,
   tags,
@@ -54,5 +58,21 @@ export default function Project({
         </ul>
       </div>
     </motion.div>
+  );
+}
+
+export default function Projects() {
+  const { language } = useLanguage();
+  const projects = projectsData[language];
+
+  return (
+    <section id="projects" className="scroll-mt-28 mb-28">
+      <SectionHeading>{translations[language].projectsTitle}</SectionHeading>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {projects.map((project, index) => (
+          <Project key={index} {...project} />
+        ))}
+      </div>
+    </section>
   );
 }
