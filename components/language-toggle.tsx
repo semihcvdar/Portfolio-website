@@ -7,7 +7,7 @@ export default function LanguageToggle() {
 
   return (
     <button
-      className="fixed top-5 right-5 bg-white w-[3rem] h-[3rem] bg-opacity-80 backdrop-blur-[0.5rem] border border-white/40 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all dark:bg-gray-950 font-semibold text-sm"
+      className="fixed top-5 right-5 bg-white w-[3rem] h-[3rem] bg-opacity-80 backdrop-blur-[0.5rem] border border-white/40 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all dark:bg-gray-950 font-semibold text-sm z-[999]"
       onClick={toggleLanguage}
     >
       {language === "en" ? "TR" : "EN"}
