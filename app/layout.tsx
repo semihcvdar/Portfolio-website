@@ -8,12 +8,13 @@ import { Toaster } from 'react-hot-toast';
 import Footer from "@/components/footer";
 import ThemeToggle from "@/components/theme-toggle";
 import LanguageToggle from "@/components/language-toggle";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Semih | Personal Portfolio',
-  description: 'Semih is a student and developer',
+  description: 'Code-driven. Design-minded. ',
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
@@ -44,7 +45,9 @@ export default function RootLayout({
               <Footer />
               <ThemeToggle />
               <LanguageToggle />
-              <Toaster position="top-right" />    
+              <Toaster position="top-right" /> 
+              <SpeedInsights />
+   
             </ActiveSectionContextProvider>      
           </ThemeContextProvider>
         </LanguageContextProvider>
