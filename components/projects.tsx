@@ -1,52 +1,73 @@
 "use client";
 
 import React from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
+import SectionHeading from "./section-heading";
 import { projectsData } from "@/lib/data";
+import Project from "./project";
+import { useSectionInView } from "@/lib/hooks";
+import { motion } from "framer-motion";
+import { useLanguage } from "@/context/language-context";
+import { translations } from "@/lib/translations";
 
+export default function Projects() {
+  const { ref } = useSectionInView("Projects", 0.7);
+  const { language } = useLanguage();
+  const t = translations[language];
 
-type ProjectProps = (typeof projectsData["en"])[number];
+  const containerVariants = {
+    initial: { opacity: 0 },
+    animate: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+        delayChildren: 0.2,
+      },
+    },
+  };
 
-export default function Project({
-  title,
-  description,
-  tags,
-  imageUrl,
-  link,
-}: ProjectProps) {
+  const itemVariants = {
+    initial: {
+      opacity: 0,
+      y: 50,
+      scale: 0.9,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  
+  const projectList = projectsData[language] ?? projectsData["en"];
+
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
-      className="group relative rounded-lg border border-gray-200 dark:border-white/10 overflow-hidden"
-    >
-      <a href={link} target="_blank" rel="noopener noreferrer">
-        <Image
-          src={imageUrl}
-          alt={title}
-          width={1000}
-          height={560}
-          quality={95}
-          className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
-        />
-      </a>
-      <div className="p-4">
-        <h3 className="text-xl font-bold">{title}</h3>
-        <p className="mt-2 text-gray-700 dark:text-gray-300 whitespace-pre-line">{description}</p>
-        <ul className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag, index) => (
-            <li
-              key={index}
-              className="bg-gray-100 dark:bg-white/10 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full text-sm"
-            >
-              {tag}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </motion.div>
+    <section ref={ref} id="projects" className="scroll-mt-28 mb-28 min-h-[40vh]">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <SectionHeading>{t.projectsTitle}</SectionHeading>
+      </motion.div>
+
+      <motion.div
+        className="flex flex-col gap-8"
+        variants={containerVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+      >
+        {projectList.map((project, index) => (
+          <motion.div key={index} variants={itemVariants}>
+            <Project {...project} />
+          </motion.div>
+        ))}
+      </motion.div>
+    </section>
   );
 }
