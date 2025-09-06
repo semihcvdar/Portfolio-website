@@ -35,12 +35,12 @@ export const links = [
 export const experiencesData = {
   en: [
     {
-      title: "Laboratory Intern - LWS EMEA",
-      location: "Çekmeköy, Istanbul",
+      title: "Technical Support Intern - IBTECH at QNB Finansbank",
+      location: "Gebze, Kocaeli",
       description:
-        "I assisted in laboratory documentation and technical reports. I gained experience in industry standards and equipment diagnostics.",
+        "I provided technical support for end users and helped set up computers and peripherals for new employees. I gained experience in Active Directory and Cisco network infrastructure.",
       icon: React.createElement(CgWorkAlt),
-      date: "Jan 2022 - May 2023",
+      date: "May 2024 - Jul 2024",
     },
     {
       title: "Service Technician - LWS EMEA",
@@ -51,31 +51,15 @@ export const experiencesData = {
       date: "Jan 2023 - Dec 2023",
     },
     {
-      title: "Technical Support Intern - IBTECH at QNB Finansbank",
-      location: "Gebze, Kocaeli",
+      title: "Laboratory Intern - LWS EMEA",
+      location: "Çekmeköy, Istanbul",
       description:
-        "I provided technical support for end users and helped set up computers and peripherals for new employees. I gained experience in Active Directory and Cisco network infrastructure.",
+        "I assisted in laboratory documentation and technical reports. I gained experience in industry standards and equipment diagnostics.",
       icon: React.createElement(CgWorkAlt),
-      date: "May 2024 - Jul 2024",
+      date: "Jan 2022 - May 2023",
     },
   ],
   tr: [
-    {
-      title: "Laboratuvar Stajyeri - LWS EMEA",
-      location: "Çekmeköy, İstanbul",
-      description:
-        "Laboratuvar ortamında dokümantasyon ve teknik raporlarda yardım ettim. Endüstri standartları ve ekipman teşhisleri konusunda deneyim kazandım.",
-      icon: React.createElement(CgWorkAlt),
-      date: "Oca 2022 - May 2023",
-    },
-    {
-      title: "Servis Teknisyeni - LWS EMEA",
-      location: "Çekmeköy, İstanbul",
-      description:
-        "Cihaz arızalarını teşhis ettim ve onardım, ekipmanların düzgün çalışmasını sağladım. Teknik servis süreçlerinde aktif rol aldım ve müşterilerle doğrudan iletişim kurarak müşteri desteği sağladım. Teknik dokümantasyona katkıda bulundum ve süreç boyunca kalite ve verimliliği korumak için laboratuvar ortamında çalıştım.",
-      icon: React.createElement(CgWorkAlt),
-      date: "Oca 2023 - Ara 2023",
-    },
     {
       title: "Teknik Destek Stajyeri - QNB Finansbank'ta IBTECH",
       location: "Gebze, Kocaeli",
@@ -83,6 +67,22 @@ export const experiencesData = {
         "Son kullanıcılar için teknik destek sağladım ve yeni çalışanlar için bilgisayar ve çevre birimlerinin kurulumuna yardım ettim. Active Directory ve Cisco ağ altyapısı konusunda deneyim kazandım",
       icon: React.createElement(CgWorkAlt),
       date: "May 2024 - Tem 2024",
+    },
+    {
+      title: "Servis Teknisyeni - LWS EMEA",
+      location: "Çekmeköy, İstanbul",
+      description:
+        "Cihaz arızalarını teşhis ettim ve onardım, ekipmanların düzgün çalışmasını sağladım. Teknik servis süreçlerinde aktif rol aldım ve müşterilerle doğrudan iletişim kurarak müşteri desteği sağladım. Teknik dokümantasyona katkıda bulundum ve süreç boyunca kalite ve verimliliği korumak için laboratuvar ortamında çalıştım.",
+      icon: React.createElement(CgWorkAlt),
+      date: "Haz 2023 - Ara 2023",
+    },
+    {
+      title: "Laboratuvar Stajyeri - LWS EMEA",
+      location: "Çekmeköy, İstanbul",
+      description:
+        "Laboratuvar ortamında dokümantasyon ve teknik raporlarda yardım ettim. Endüstri standartları ve ekipman teşhisleri konusunda deneyim kazandım.",
+      icon: React.createElement(CgWorkAlt),
+      date: "Haz 2022 - May 2023",
     },
   ],
 } as const;

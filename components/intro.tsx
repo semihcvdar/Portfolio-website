@@ -11,6 +11,7 @@ import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { useLanguage } from "@/context/language-context";
 import { translations } from "@/lib/translations";
+import { trackCVDownload } from "@/lib/gtag";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
@@ -144,6 +145,11 @@ export default function Intro() {
             className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/90 dark:hover:text-white"
             href={t.cvFile}
             download
+            onClick={() => {
+              // Track CV download based on language
+              const cvType = language === 'tr' ? 'turkish' : 'english';
+              trackCVDownload(cvType);
+            }}
           >
             {t.downloadCV}{" "}
             <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />

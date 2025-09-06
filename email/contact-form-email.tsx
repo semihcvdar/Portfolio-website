@@ -31,7 +31,7 @@ export default function ContactFormEmail({message, senderEmail}: ContactFormEmai
 
     return <Html>
         <Head/>
-        <Preview>📧 Yeni Portfolio İletişim Mesajı</Preview>
+        <Preview>📧 Yeni İletişim Mesajı</Preview>
         <Tailwind>
             <Body className="bg-gray-50 text-gray-800 font-sans">
                 <Container className="mx-auto py-8 px-4 max-w-lg">
@@ -74,7 +74,7 @@ export default function ContactFormEmail({message, senderEmail}: ContactFormEmai
                         <Row className="text-center">
                             <Column>
                                 <Text className="text-sm text-gray-500">
-                                    Bu mesaj Semih Cavdar'ın portfolio sitesinden gönderilmiştir
+                                    Bu mesaj Semih Çavdar'ın portfolio sitesinden gönderilmiştir
                                 </Text>
                                 <Text className="text-xs text-gray-400 mt-2">
                                     {currentDate}
