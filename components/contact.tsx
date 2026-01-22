@@ -1,10 +1,9 @@
 "use client";
 
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import SectionHeading from './section-heading';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSectionInView } from '@/lib/hooks';
-import {sendEmail} from "@/actions/sendEmail";
 import SubmitBtn from './submit-btn';
 import { useLanguage } from "@/context/language-context";
 import { translations } from "@/lib/translations";
@@ -16,6 +15,7 @@ export default function Contact() {
     const [showSuccessMessage, setShowSuccessMessage] = useState(false);
     const [showErrorMessage, setShowErrorMessage] = useState(false);
     const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+    const formRef = useRef<HTMLFormElement>(null);
 
     const formVariants = {
         initial: { opacity: 0, y: 50 },
@@ -84,6 +84,7 @@ export default function Contact() {
             <AnimatePresence mode="wait">
                 {!isFormSubmitted ? (
                     <motion.form 
+                        ref={formRef}
                         key="contact-form"
                         className="flex flex-col gap-4"
                         variants={formVariants}
@@ -92,20 +93,40 @@ export default function Contact() {
                         exit={{ opacity: 0, y: -20, scale: 0.95 }}
                         transition={{ duration: 0.3 }}
                         action={async (formData: FormData) => {
-                          const {error} = await sendEmail(formData);
+                          const senderEmail = formData.get("senderEmail");
+                          const message = formData.get("message");
 
-                          if (error) {
+                          try {
+                            const response = await fetch("/api/contact", {
+                              method: "POST",
+                              headers: {
+                                "Content-Type": "application/json",
+                              },
+                              body: JSON.stringify({
+                                senderEmail,
+                                message,
+                              }),
+                            });
+
+                            const data = await response.json();
+
+                            if (!response.ok || data.error) {
+                              setShowErrorMessage(true);
+                              setTimeout(() => setShowErrorMessage(false), 5000);
+                              return;
+                            }
+
+                            formRef.current?.reset();
+                            setIsFormSubmitted(true);
+                            setShowSuccessMessage(true);
+                            setTimeout(() => {
+                              setShowSuccessMessage(false);
+                              setIsFormSubmitted(false);
+                            }, 5000);
+                          } catch (error) {
                             setShowErrorMessage(true);
                             setTimeout(() => setShowErrorMessage(false), 5000);
-                            return;
                           }
-
-                          setIsFormSubmitted(true);
-                          setShowSuccessMessage(true);
-                          setTimeout(() => {
-                            setShowSuccessMessage(false);
-                            setIsFormSubmitted(false);
-                          }, 5000);
                         }}
                     >
                         <motion.input 
