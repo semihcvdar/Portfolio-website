@@ -1,8 +1,8 @@
+export const runtime = "edge";  // ← bunu ekle
+
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
-import React from "react";
 import { validateString, getErrorMessage } from "@/lib/utils";
-import ContactFormEmail from "@/email/contact-form-email";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -11,7 +11,6 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { senderEmail, message } = body;
 
-    // Server-side validation
     if (!validateString(senderEmail, 500)) {
       return NextResponse.json(
         { error: "Invalid sender email" },
@@ -32,10 +31,6 @@ export async function POST(request: NextRequest) {
       subject: `📧 Yeni Portfolio Mesajı - ${senderEmail}`,
       text: message as string,
       replyTo: senderEmail as string,
-      react: React.createElement(ContactFormEmail, {
-        message: message as string,
-        senderEmail: senderEmail as string,
-      }),
     });
 
     return NextResponse.json({ success: true, data }, { status: 200 });
