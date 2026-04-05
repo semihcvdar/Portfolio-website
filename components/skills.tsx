@@ -2,7 +2,7 @@
 
 import React from 'react'
 import SectionHeading from './section-heading';
-import { skillsData } from '@/lib/data';
+import { usePortfolio } from '@/context/portfolio-context';
 import { useSectionInView } from '@/lib/hooks';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/context/language-context';
@@ -30,6 +30,8 @@ const fadeInAnimationVariants = {
 export default function Skills() {
     const { ref } = useSectionInView("Skills");
     const { language } = useLanguage();
+    const { data } = usePortfolio();
+    const skillsData = data.skills;
 
   return (
     <section 

@@ -4,13 +4,11 @@ import React from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
-import { useLanguage } from "@/context/language-context";
-import { translations } from "@/lib/translations";
+import { useSiteTranslations } from "@/lib/use-site-translations";
 
 export default function About() {
   const { ref } = useSectionInView("About");
-  const { language } = useLanguage();
-  const t = translations[language];
+  const t = useSiteTranslations();
 
   const textVariants = {
     initial: { opacity: 0, y: 20 },

@@ -7,12 +7,12 @@ import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { useLanguage } from "@/context/language-context";
-import { translations } from "@/lib/translations";
+import { useSiteTranslations } from "@/lib/use-site-translations";
 
 export default function Header() {
   const {activeSection, setActiveSection, setTimeOfLastClick} = useActiveSectionContext();
   const { language } = useLanguage();
-  const t = translations[language];
+  const t = useSiteTranslations();
 
   return (<header className="z-[9999] relative">
     <motion.div className="fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-white border-opacity-40 bg-white bg-opacity-80

@@ -10,14 +10,19 @@ import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { useLanguage } from "@/context/language-context";
-import { translations } from "@/lib/translations";
+import { useSiteTranslations } from "@/lib/use-site-translations";
 import { trackCVDownload } from "@/lib/gtag";
+import { usePortfolio } from "@/context/portfolio-context";
+import { DEFAULT_PROFILE_IMAGE_URL } from "@/lib/default-profile-image";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
   const {setActiveSection, setTimeOfLastClick} = useActiveSectionContext();
   const { language } = useLanguage();
-  const t = translations[language];
+  const t = useSiteTranslations();
+  const { data } = usePortfolio();
+  const profileSrc = data.profileImageUrl?.trim() || DEFAULT_PROFILE_IMAGE_URL;
+  const profileRemote = /^https?:\/\//i.test(profileSrc);
 
   // DevOps kelimelerini kalın yapmak için fonksiyon
   const renderDescription = (text: string) => {
@@ -65,15 +70,26 @@ export default function Intro() {
               duration: 0.7,
             }}
           >
-            <Image
-              src="https://images.unsplash.com/photo-1707123804818-ab608806ec6c?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Semih portrait"
-              width={192}
-              height={192}
-              quality={95}
-              priority
-              className="h-28 w-28 rounded-full object-cover border-[0.25rem] border-white shadow-xl dark:border-gray-500"
-            />
+            {profileRemote ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={profileSrc}
+                alt={t.introTitle}
+                width={192}
+                height={192}
+                className="h-28 w-28 rounded-full object-cover border-[0.25rem] border-white shadow-xl dark:border-gray-500"
+              />
+            ) : (
+              <Image
+                src={profileSrc}
+                alt={t.introTitle}
+                width={192}
+                height={192}
+                quality={95}
+                priority
+                className="h-28 w-28 rounded-full object-cover border-[0.25rem] border-white shadow-xl dark:border-gray-500"
+              />
+            )}
           </motion.div>
 
           <motion.span

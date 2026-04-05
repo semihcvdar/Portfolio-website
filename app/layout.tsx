@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import ThemeContextProvider from "@/context/theme-context";
 import { LanguageContextProvider } from "@/context/language-context";
+import { PortfolioProvider } from "@/context/portfolio-context";
 import { Toaster } from 'react-hot-toast';
 import Footer from "@/components/footer";
 import ThemeToggle from "@/components/theme-toggle";
@@ -60,6 +61,7 @@ export default function RootLayout({
           sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394]"></div>
 
         <LanguageContextProvider>
+          <PortfolioProvider>
           <ThemeContextProvider>
             <ActiveSectionContextProvider>
               <Header/>
@@ -72,6 +74,7 @@ export default function RootLayout({
    
             </ActiveSectionContextProvider>      
           </ThemeContextProvider>
+          </PortfolioProvider>
         </LanguageContextProvider>
       </body>
     </html>

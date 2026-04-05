@@ -4,7 +4,8 @@ import React from 'react'
 import SectionHeading from './section-heading'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { experiencesData } from "@/lib/data";
+import { usePortfolio } from "@/context/portfolio-context";
+import { experienceIconElement } from "@/lib/experience-icons";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/context/language-context';
@@ -15,6 +16,8 @@ export default function Experience() {
     const { ref } = useSectionInView("Experience");
     const { language } = useLanguage();
     const t = translations[language];
+    const { data } = usePortfolio();
+    const items = data.experiences[language];
 
     const fadeInAnimationVariants = {
         initial: {
@@ -59,7 +62,7 @@ export default function Experience() {
         </motion.div>
         
         <VerticalTimeline animate={false} lineColor="" >
-            {experiencesData[language].map((item, index) => (
+            {items.map((item, index) => (
                     <React.Fragment key={index}>
                     <motion.div
                         variants={index % 2 === 0 ? fadeInAnimationVariants : fadeInRightAnimationVariants}
@@ -82,7 +85,7 @@ export default function Experience() {
                             borderRight: "0.4rem solid #9ca3af",
                         }}
                         date={item.date}
-                        icon={item.icon}
+                        icon={experienceIconElement(item.iconKey)}
                         iconStyle={{
                             background: "white",
                             fontSize: "1.5rem",
