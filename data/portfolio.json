@@ -5,21 +5,21 @@
       {
         "title": "Technical Support Intern - IBTECH at QNB Finansbank",
         "location": "Gebze, Kocaeli",
-        "description": "I provided technical support for end users and helped set up computers and peripherals for new employees. I gained experience in Active Directory and Cisco network infrastructure.",
+        "description": "I provided technical support to end users for various hardware devices, primarily desktop and laptop computers. I played an active role in the installation, configuration, and deployment of new user computers and peripherals. I supported system management processes by gaining hands-on experience at a foundational level with Cisco networking devices and the Active Directory infrastructure. Additionally, I regularly managed the asset tracking and record-keeping processes for devices in the company’s inventory.",
         "iconKey": "CgWorkAlt",
         "date": "May 2024 - Jul 2024"
       },
       {
         "title": "Service Technician - LWS EMEA",
         "location": "Çekmeköy, Istanbul",
-        "description": "I diagnosed and repaired device malfunctions, ensured proper operation of equipment. I took an active role in technical service processes and provided direct customer support by communicating with customers. I contributed to technical documentation and worked in a laboratory environment to maintain quality and efficiency throughout the process.",
+        "description": "I played an active role in the installation, calibration, and maintenance of particulate matter measurement devices. I ensured the stable operation of the systems by managing troubleshooting and repair processes. I conducted software-based testing and validation processes on devices using Modbus RS485 communication. Additionally, I provided technical support by participating in the integration and commissioning of devices into the LAN infrastructure at customer sites.",
         "iconKey": "CgWorkAlt",
         "date": "Jan 2023 - Dec 2023"
       },
       {
         "title": "Laboratory Intern - LWS EMEA",
         "location": "Çekmeköy, Istanbul",
-        "description": "I assisted in laboratory documentation and technical reports. I gained experience in industry standards and equipment diagnostics.",
+        "description": "I gained hands-on experience in the field by acquiring practical knowledge of automation systems. I played an active role in maintenance and troubleshooting processes by providing technical support for malfunctions in particulate, T-RH, and DP sensors.",
         "iconKey": "CgWorkAlt",
         "date": "Jan 2022 - May 2023"
       }
@@ -28,21 +28,21 @@
       {
         "title": "Teknik Destek Stajyeri - QNB Finansbank'ta IBTECH",
         "location": "Gebze, Kocaeli",
-        "description": "Son kullanıcılar için teknik destek sağladım ve yeni çalışanlar için bilgisayar ve çevre birimlerinin kurulumuna yardım ettim. Active Directory ve Cisco ağ altyapısı konusunda deneyim kazandım",
+        "description": "Masaüstü ve dizüstü bilgisayarlar başta olmak üzere çeşitli donanımlar için son kullanıcılara teknik destek sağladım. Yeni kullanıcı bilgisayarları ile çevre birimlerinin kurulum, yapılandırma ve devreye alma süreçlerinde aktif rol aldım. Cisco ağ cihazları ve Active Directory altyapısı üzerinde temel düzeyde uygulamalı deneyim kazanarak sistem yönetimi süreçlerine destek verdim. Ayrıca şirket envanterine ait cihazların zimmet takibi ve kayıt işlemlerini düzenli şekilde yürüttüm.",
         "iconKey": "CgWorkAlt",
         "date": "May 2024 - Tem 2024"
       },
       {
         "title": "Servis Teknisyeni - LWS EMEA",
         "location": "Çekmeköy, İstanbul",
-        "description": "Cihaz arızalarını teşhis ettim ve onardım, ekipmanların düzgün çalışmasını sağladım. Teknik servis süreçlerinde aktif rol aldım ve müşterilerle doğrudan iletişim kurarak müşteri desteği sağladım. Teknik dokümantasyona katkıda bulundum ve süreç boyunca kalite ve verimliliği korumak için laboratuvar ortamında çalıştım.",
+        "description": "Partikül ölçüm cihazlarının kurulum, kalibrasyon ve bakım süreçlerinde aktif rol aldım. Arıza tespiti ve onarım süreçlerini yürüterek sistemlerin stabil çalışmasını sağladım. Modbus RS485 haberleşmeli cihazlar üzerinde yazılım tabanlı test ve doğrulama süreçlerini yürüttüm. Aynı zamanda müşteri sahasında cihazların LAN altyapısına entegrasyonu ve devreye alınması süreçlerinde yer alarak teknik destek sağladım.",
         "iconKey": "CgWorkAlt",
         "date": "Haz 2023 - Ara 2023"
       },
       {
         "title": "Laboratuvar Stajyeri - LWS EMEA",
         "location": "Çekmeköy, İstanbul",
-        "description": "Laboratuvar ortamında dokümantasyon ve teknik raporlarda yardım ettim. Endüstri standartları ve ekipman teşhisleri konusunda deneyim kazandım.",
+        "description": "Otomasyon sistemleri konusunda uygulamalı bilgi edinerek sahada aktif deneyim kazandım. Partikül, T-RH ve DP sensörlerinde oluşan arızalara teknik destek sağlayarak bakım ve sorun giderme süreçlerinde görev aldım.",
         "iconKey": "CgWorkAlt",
         "date": "Haz 2022 - May 2023"
       }
@@ -102,6 +102,10 @@
     "JWT (Authentication)",
     "Git & GitHub",
     "RESTful APIs",
-    "Zustand"
+    "Zustand",
+    "Windows / macOS",
+    "Troubleshooting",
+    "Basic Network"
+
   ]
 }

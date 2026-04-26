@@ -10,7 +10,8 @@ export const translations = {
 
     // Intro Section
     introTitle: "Hi, I'm Semih.",
-    introDescription: "I work on Full-Stack projects to improve myself and take an active role in every stage of software development. While gaining experience in both frontend and backend development, I'm especially passionate about **DevOps** and aim to build my career in this field. I strive to take responsibility in key areas of the software lifecycle such as automation, security, and sustainability, with the goal of establishing a **DevOps**-focused professional path.",
+    introDescription: "I work on full-stack projects to improve myself in software development and IT. While gaining experience in both frontend and backend development, I also focus on understanding system architectures, basic networking concepts, and technical support processes.By analyzing application performance and system efficiency, I continuously develop my problem-solving and technical analysis skills.",
+
     contactMe: "Contact me here",
     downloadCV: "Download CV",
     cvFile: "/CV-EN.pdf",
