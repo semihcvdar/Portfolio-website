@@ -18,7 +18,7 @@ export const translations = {
 
     // About Section
     aboutTitle: "About Me",
-    aboutText1: "I graduated from the Vocational High School Information Technologies Department and Trakya University's Computer Programming Department. I'm someone who is dedicated to improving myself in the field of software and places great importance on continuous learning. In the past, I worked as an IT Support Specialist and Service Technician. During this time, I actively took part in technical support processes, hardware troubleshooting, system setups, and providing end-user assistance.",
+    aboutText1: "I graduated rom the Vocational High School Information Technologies Department and Trakya University's Computer Programming Department. I'm someone who is dedicated to improving myself in the field of software and places great importance on continuous learning. In the past, I worked as an IT Support Specialist and Service Technician. During this time, I actively took part in technical support processes, hardware troubleshooting, system setups, and providing end-user assistance.",
     aboutText2: "Currently, I am focused on building my career in software development. I'm working on Full-Stack projects to enhance my technical skills, while also aiming to gain knowledge and experience in the field of DevOps. I am team-oriented, solution-focused, and highly motivated to continuously improve myself within the software industry. I aim to take part in projects and collaborations where I can contribute value and continue growing professionally.",
     aboutText3: "I'm open to new opportunities, eager to learn, and always looking forward to contributing to meaningful projects where I can grow both technically and personally.",
 
@@ -53,7 +53,7 @@ export const translations = {
 
     // Intro Section
     introTitle: "Merhaba, ben Semih.",
-    introDescription: "Kendimi geliştirmek amacıyla Full-Stack projeler üzerinde çalışıyor ve yazılım geliştirme sürecinin her aşamasında aktif rol alıyorum. Hem ön yüz hem de arka yüz geliştirme konularında deneyim kazanırken, özellikle **DevOps** alanına duyduğum ilgiyle bu alanda derinleşmeyi hedefliyorum. Yazılım yaşam döngüsünün otomasyon, güvenlik ve sürdürülebilirlik gibi kritik noktalarında sorumluluk alarak, kariyerimi **DevOps** odaklı bir yönde inşa etmek istiyorum.",
+    introDescription: "Yazılım geliştirme ve bilişim alanlarında kendimi geliştirmek amacıyla full-stack projelerde çalışıyorum. Hem ön uç hem de arka uç geliştirme alanlarında deneyim kazanırken, aynı zamanda sistem mimarilerini, temel ağ kavramlarını ve teknik destek süreçlerini anlamaya da odaklanıyorum. Uygulama performansını ve sistem verimliliğini analiz ederek, problem çözme ve teknik analiz becerilerimi sürekli olarak geliştiriyorum.",
     contactMe: "Benimle iletişime geçin",
     downloadCV: "CV İndir",
     cvFile: "/CV.pdf",
