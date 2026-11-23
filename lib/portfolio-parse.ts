@@ -43,6 +43,7 @@ const COPY_KEYS = [
   "aboutText1",
   "aboutText2",
   "aboutText3",
+  "aboutText4",
   "footerText",
 ] as const;
 

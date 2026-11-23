@@ -18,9 +18,10 @@ export const translations = {
 
     // About Section
     aboutTitle: "About Me",
-    aboutText1: "I graduated rom the Vocational High School Information Technologies Department and Trakya University's Computer Programming Department. I'm someone who is dedicated to improving myself in the field of software and places great importance on continuous learning. In the past, I worked as an IT Support Specialist and Service Technician. During this time, I actively took part in technical support processes, hardware troubleshooting, system setups, and providing end-user assistance.",
-    aboutText2: "Currently, I am focused on building my career in software development. I'm working on Full-Stack projects to enhance my technical skills, while also aiming to gain knowledge and experience in the field of DevOps. I am team-oriented, solution-focused, and highly motivated to continuously improve myself within the software industry. I aim to take part in projects and collaborations where I can contribute value and continue growing professionally.",
-    aboutText3: "I'm open to new opportunities, eager to learn, and always looking forward to contributing to meaningful projects where I can grow both technically and personally.",
+    aboutText1: "I graduated from the Vocational High School Information Technologies Department and Trakya University's Computer Programming Department. Throughout my education and working life, I have been interested in information technology and have continued to develop myself in this field.",
+    aboutText2: "Previously, I worked as an IT Support Technician and a Service Technician. During these roles, I took part in a range of processes, including technical support, resolving hardware and software issues, system installations, network infrastructure, and end-user support. These experiences gave me a close understanding of the day-to-day running of IT operations and of how important it is to produce solutions to technical problems.",
+    aboutText3: "I aim to continue my career in information technology and, in particular, to deepen my experience in IT support, systems administration, and operational processes. Alongside that, I work on using artificial intelligence technologies and automation solutions to simplify business processes, reduce repetitive tasks, and improve the efficiency of IT operations.",
+    aboutText4: "I enjoy following new technologies, putting what I learn into practice, and developing different solutions to the problems I encounter. In the long term, I aim to keep growing my technical knowledge and experience and to contribute to improving IT processes.",
 
     // Skills Section
     skillsTitle: "My skills",
@@ -60,9 +61,10 @@ export const translations = {
 
     // About Section
     aboutTitle: "Hakkımda",
-    aboutText1: "Meslek Lisesi Bilgi Teknolojileri Bölümü ve Trakya Üniversitesi Bilgisayar Programcılığı Bölümü'nden mezun oldum. Yazılım alanında kendimi geliştirmeye adanmış ve sürekli öğrenmeye büyük önem veren biriyim. Geçmişte IT Destek Uzmanı ve Servis Teknisyeni olarak çalıştım. Bu süre zarfında teknik destek süreçlerinde aktif rol aldım, donanım sorun giderme, sistem kurulumları ve son kullanıcı desteği sağladım.",
-    aboutText2: "Şu anda yazılım geliştirme alanında kariyerimi geliştirmeye odaklanıyorum. Teknik becerilerimi geliştirmek için Full-Stack projeler üzerinde çalışırken, DevOps alanında da bilgi ve deneyim kazanmayı hedefliyorum. Takım odaklı, çözüm odaklı ve yazılım endüstrisinde sürekli kendimi geliştirmeye yüksek motivasyonlu biriyim. Değer katabileceğim ve profesyonel olarak büyümeye devam edebileceğim proje ve işbirliklerinde yer almayı hedefliyorum.",
-    aboutText3: "Yeni fırsatlara açığım, öğrenmeye hevesliyim ve hem teknik hem de kişisel olarak büyüyebileceğim anlamlı projelere katkıda bulunmayı her zaman bekliyorum.",
+    aboutText1: "Meslek Lisesi Bilgi Teknolojileri Bölümü ve Trakya Üniversitesi Bilgisayar Programcılığı Bölümü'nden mezun oldum. Eğitimim ve çalışma hayatım boyunca bilgi teknolojileri alanına ilgi duydum ve bu alanda kendimi geliştirmeye devam ettim.",
+    aboutText2: "Daha önce BT Destek Teknisyeni ve Servis Teknisyeni olarak görev aldım. Bu deneyimlerim sırasında teknik destek, donanım ve yazılım sorunlarının giderilmesi, sistem kurulumları, ağ altyapıları ve son kullanıcı desteği gibi farklı süreçlerde yer aldım. Edindiğim deneyimler sayesinde BT operasyonlarının günlük işleyişini ve teknik problemlere çözüm üretmenin önemini yakından tanıdım.",
+    aboutText3: "Kariyerime bilgi teknolojileri alanında devam etmeyi ve özellikle BT destek, sistem yönetimi ve operasyon süreçlerinde deneyimimi artırmayı hedefliyorum. Bunun yanında, yapay zekâ teknolojileri ve otomasyon çözümleriyle iş süreçlerini kolaylaştırmak, tekrarlayan işlemleri azaltmak ve BT operasyonlarının verimliliğini artırmak üzerine çalışıyorum.",
+    aboutText4: "Yeni teknolojileri takip etmeyi, öğrendiklerimi uygulamaya dönüştürmeyi ve karşılaştığım problemlere farklı çözümler geliştirmeyi seviyorum. Uzun vadede teknik bilgi ve deneyimimi sürekli geliştirerek BT süreçlerinin iyileştirilmesine katkı sağlamayı amaçlıyorum.",
 
     // Skills Section
     skillsTitle: "Yeteneklerim",

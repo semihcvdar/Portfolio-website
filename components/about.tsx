@@ -61,6 +61,7 @@ export default function About() {
       </motion.p>
 
       <motion.p
+        className="mb-3"
         variants={textVariants}
         initial="initial"
         whileInView="animate"
@@ -68,6 +69,16 @@ export default function About() {
         transition={{ delay: 0.4 }}
       >
         {t.aboutText3}
+      </motion.p>
+
+      <motion.p
+        variants={textVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+        transition={{ delay: 0.6 }}
+      >
+        {t.aboutText4}
       </motion.p>
     </motion.section>
   );

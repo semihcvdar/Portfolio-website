@@ -22,6 +22,7 @@ export type PortfolioCopy = {
   aboutText1?: string;
   aboutText2?: string;
   aboutText3?: string;
+  aboutText4?: string;
   footerText?: string;
 };
 
